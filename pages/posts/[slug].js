@@ -1,3 +1,6 @@
+import styles from '../../styles/PostView.module.css'
+import Link from 'next/link'
+
 export const getStaticPaths = async () => {
     const res = await fetch(`https://preneurserver.herokuapp.com/api/api-post`);
     const data = await res.json();
@@ -37,6 +40,9 @@ const Post = ({ post }) => {
          <p>
             <div dangerouslySetInnerHTML={{ __html: post.post_content }}></div>
          </p>
+      <Link href="/posts">
+        <a className={styles.btn}>Back to Posts' List</a>
+      </Link>
         </div>
     );
 }
