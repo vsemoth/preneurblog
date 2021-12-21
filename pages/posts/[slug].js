@@ -41,7 +41,7 @@ const Post = ({ post }) => {
             <div dangerouslySetInnerHTML={{ __html: post.post_content }}></div>
          </p>
       <Link href="/posts">
-        <a className={styles.btn}>Back to Posts' List</a>
+        <a className={styles.btn}>Back to Posts List</a>
       </Link>
         </div>
     );

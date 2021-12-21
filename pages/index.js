@@ -22,7 +22,7 @@ export default function Home({ post }) {
           </p>
         </div>
       <Link href="/posts">
-        <a className={styles.btn}>See Posts' Listing</a>
+        <a className={styles.btn}>See Posts Listing</a>
       </Link>
     </>
   )
