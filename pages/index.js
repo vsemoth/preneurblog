@@ -29,7 +29,7 @@ export default function Home({ post }) {
 }
 
 export const getStaticProps = async () => {
-  const res = await fetch(`http://127.0.0.1:8000/api/api-post/`)
+  const res = await fetch(`https://preneurserver.herokuapp.com/api/api-post`)
   const data = await res.json() 
 
   let blob = data

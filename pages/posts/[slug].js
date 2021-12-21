@@ -1,5 +1,5 @@
 export const getStaticPaths = async () => {
-    const res = await fetch(`http://127.0.0.1:8000/api/api-post`);
+    const res = await fetch(`https://preneurserver.herokuapp.com/api/api-post`);
     const data = await res.json();
 
     const paths = data.map(post => {
@@ -17,7 +17,7 @@ export const getStaticPaths = async () => {
 export const getStaticProps = async (context) => {
 
     const slug = context.params.slug;
-    const res = await fetch(`http://127.0.0.1:8000/api/api-post/${slug}`);
+    const res = await fetch(`https://preneurserver.herokuapp.com/api/api-post/${slug}`);
     const data = await res.json();
 
     return {
