@@ -2,7 +2,7 @@ import styles from '../../styles/PostView.module.css'
 import Link from 'next/link'
 
 export const getStaticPaths = async () => {
-    const res = await fetch(`https://preneurserver.herokuapp.com/api/api-post`);
+    const res = await fetch(`https://ekhephinifm.co.za/blogserver/public/api/api-post`);
     const data = await res.json();
 
     const paths = data.map(post => {
@@ -20,7 +20,7 @@ export const getStaticPaths = async () => {
 export const getStaticProps = async (context) => {
 
     const slug = context.params.slug;
-    const res = await fetch(`https://preneurserver.herokuapp.com/api/api-post/${slug}`);
+    const res = await fetch(`https://ekhephinifm.co.za/blogserver/public/api/api-post/${slug}`);
     const data = await res.json();
 
     return {
